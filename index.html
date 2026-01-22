@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulie - Community-Driven Solana Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">Paulie</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#split">Revenue Split</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars"></div>
+        <div class="hero-content-center">
+            <h1 class="hero-title-centered">
+                <span class="gradient-text">Let's rob the dev!</span>
+            </h1>
+            <button class="btn btn-primary btn-large" onclick="scrollToSection('contact')">💰 Buy PAULIE</button>
+            <div class="pug-mob-box">
+                🐕 Join the Pug Mob - 90% of rewards to holders!
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card dark-purple">
+                    <h3>What is $PAULIE?</h3>
+                    <p>A purple gangster pug revolutionizing rewards - hold and earn real staked SOL!</p>
+                </div>
+                <div class="feature-card dark-purple">
+                    <h3>90% of Fees to Holders</h3>
+                    <p>Auto-compounding pSOL yields every 15 minutes. No claiming needed!</p>
+                </div>
+                <div class="feature-card dark-purple">
+                    <h3>Deflationary and Low Tax</h3>
+                    <p>Fair launch in Feb. 2026, community-centric with infinite compounding.</p>
+                </div>
+                <div class="feature-card dark-purple">
+                    <h3>Join the Mob</h3>
+                    <p>Rob the dev blind and dominate the meme game with juicy rewards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Split Section -->
+    <section id="split" class="revenue-split">
+        <div class="container">
+            <div class="section-header">
+                <h2>Revenue Distribution</h2>
+                <p>Where your investment goes</p>
+            </div>
+
+            <div class="split-content">
+                <div class="split-chart-container">
+                    <canvas id="splitChart"></canvas>
+                </div>
+
+                <div class="split-details">
+                    <div class="split-item community">
+                        <div class="split-header">
+                            <div class="split-circle">90%</div>
+                            <h3>Community</h3>
+                        </div>
+                        <p>Direct benefits, rewards, and growth initiatives for community members</p>
+                        <ul class="split-list">
+                            <li>✓ Staking Rewards</li>
+                            <li>✓ Governance Rights</li>
+                            <li>✓ Development Fund</li>
+                            <li>✓ Marketing & Growth</li>
+                        </ul>
+                    </div>
+
+                    <div class="split-item developers">
+                        <div class="split-header">
+                            <div class="split-circle">10%</div>
+                            <h3>Development Team</h3>
+                        </div>
+                        <p>Sustaining the team that builds and maintains the ecosystem</p>
+                        <ul class="split-list">
+                            <li>✓ Core Development</li>
+                            <li>✓ Operations</li>
+                            <li>✓ Support</li>
+                            <li>✓ Innovation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <h2>Roadmap</h2>
+                <p>Our journey to community revolution</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">Q1 2026</div>
+                    <div class="timeline-content">
+                        <h3>Foundation</h3>
+                        <p>Launch token, establish community governance, implement smart contracts</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">Q2 2026</div>
+                    <div class="timeline-content">
+                        <h3>Growth</h3>
+                        <p>First community rewards, major partnerships, ecosystem expansion</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">Q3 2026</div>
+                    <div class="timeline-content">
+                        <h3>Expansion</h3>
+                        <p>Advanced features, cross-chain integration, community initiatives launch</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">Q4 2026</div>
+                    <div class="timeline-content">
+                        <h3>Excellence</h3>
+                        <p>Full ecosystem maturity, global adoption, sustainable growth model</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Join the Community</h2>
+                <p>Be part of something revolutionary</p>
+            </div>
+
+            <div class="contact-content">
+                <form class="waitlist-form" id="waitlistForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="wallet" placeholder="Solana Wallet Address (optional)">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Get Early Access</button>
+                </form>
+
+                <div class="contact-links">
+                    <p>Follow us on social media</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                        <a href="#" class="social-icon" title="Discord">◉</a>
+                        <a href="https://t.me/+vSsk2kjPThI5MmYx" class="social-icon" title="Telegram">✈</a>
+                        <a href="#" class="social-icon" title="GitHub">⚙</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Paulie. Community-first innovation on Solana.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Whitepaper</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

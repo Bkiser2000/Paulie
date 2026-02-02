@@ -31,7 +31,7 @@ contract Paulie is Initializable,
     uint256 public constant BPS_DIVISOR = 10000; // basis points divisor
     
     // === ADDRESSES ===
-    address public jitosolAddress; // JitoSOL token address
+    string public constant JITOSOL_ADDRESS = "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn"; // JitoSOL token address on Solana
     address public devWallet; // CompFi Umbrella wallet for dev/marketing/ops
     address public rewardsVault; // Vault for distributing JitoSOL rewards
     
@@ -50,7 +50,6 @@ contract Paulie is Initializable,
     }
 
     function initialize(
-        address _jitosolAddress,
         address _devWallet,
         address _rewardsVault
     ) public initializer {
@@ -59,7 +58,6 @@ contract Paulie is Initializable,
         __Pausable_init();
         __ERC20Permit_init("Paulie");
         
-        jitosolAddress = _jitosolAddress;
         devWallet = _devWallet;
         rewardsVault = _rewardsVault;
         
@@ -151,11 +149,6 @@ contract Paulie is Initializable,
     }
 
     // === ADMIN FUNCTIONS ===
-
-    /// @notice Set JitoSOL token address
-    function setJitoSOLAddress(address _jitosolAddress) external onlyOwner {
-        jitosolAddress = _jitosolAddress;
-    }
 
     /// @notice Set dev wallet address
     function setDevWallet(address _devWallet) external onlyOwner {
